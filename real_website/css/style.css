@@ -1,16 +1,52 @@
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
 
 .header {
-    min-height: 100vh;
+    min-height: 80vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(img/background.png);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/background.png);
     background-position: center;
     background-size: cover;
     position: relative;
+}
+
+
+
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 8px 14px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.search-bar:hover {
+    width: 150px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    background: transparent;
+    color: #000;
+}
+
+.search-bar i {
+    cursor: pointer;
+    font-size: 20px;
+    color: #5372f0;
 }
 
 nav {
@@ -21,7 +57,31 @@ nav {
 }
 
 nav img {
-    width: 50px;
+    width: 51px;
+}
+
+.hero-title-box {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 7px;
+    top: -100px;
+    position: relative;
+    color: #fff;
+}
+
+.hero-title-box h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.hero-title-box p {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-top: 12px;
 }
 
 .nav-links {
@@ -35,6 +95,25 @@ nav img {
     padding: 8px 12px;
     position: relative;
 }
+
+.menu-categories {
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* — ГОЛЛУУЛНА */
+    align-items: center;
+    gap: 40px;                 /* Картуудын хооронд зай */
+    margin-top: 60px;
+    z-index: 10;               /* Давалгаанаас дээр харагдана */
+    position: relative;
+}
+
+
+
+.mongol-text {
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+}
+
 
 .nav-links ul li a {
     color: #fff;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
 
 * {
     margin: 0;
@@ -13,7 +13,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(#ECEFFE, #CED6FB);
-    background-image: url(background.png);
+    background-image: url(../img/background.png);
 }
 
 .card-wrapper {
@@ -55,37 +55,26 @@ body {
 }
 
 .card-list .card-link .badge {
-    
+    color: #5372f0;
     padding: 8px 16px;
     font-size: 0.95rem;
     font-weight: 500;
-    margin: 16px;
-    
+    margin: 16px 0 18px;
+    background: #dde4ff;
     width: fit-content;
     border-radius: 50px;
-
-    writing-mode: vertical-rl;   /* Босоо болгоно */
-    text-orientation: mixed; 
-    font-size: 2rem;             /* Томруулна */
-    line-height: 2.2rem;         /* Босоо мөр хоорондын зай */
-    
-    margin: 0 auto; 
 }
 
 .card-list .card-link .card-title {
     font-size: 1.19rem;
-    font-weight: 300;
+    font-weight: 600;
     color: #000;
-    writing-mode: horizontal-tb;   /* хэвтээ */
-    text-orientation: mixed;       /* үсгүүд хэвийн харагдана */
-    font-size: 1.5rem;          /* Босоо мөр хоорондын зай */
-    
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .card-list .card-link .card-button {
-    height: 35px;
-    width: 35px;
+    height: 43px;
+    width: 30px;
     border-radius: 50%;
     color: #5372f0;
     margin: 30px 0 5px;
