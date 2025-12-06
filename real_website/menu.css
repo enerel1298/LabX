@@ -12,6 +12,29 @@
     margin-right: auto; 
 }
 
+.menu-category {
+    position: relative;
+}
+
+.card-title {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+
+    background: rgba(255, 255, 255, 0.85);
+    padding: 4px 10px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    letter-spacing: 0.5px;
+
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
 .menu-category{
     background: #f8f8f8;       /* Цайвар саарал фон (зурагтай адил) */
     padding: 40px 30px;

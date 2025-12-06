@@ -13,6 +13,20 @@
     position: relative;
 }
 
+.top-title{
+    position: absolute;
+    top: 8%;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+    z-index: 10;
+    pointer-events: none;
+}
+
 .search-bar {
     position: relative;
     display: flex;
