@@ -1,82 +1,99 @@
+/* Ерөнхий тохиргоо */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f9f9f9;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
 }
 
 .page {
-    width: 800px;
-    background: #fff;
+    width: 100%;
+    max-width: 600px;
     margin: auto;
-    padding: 40px 50px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    position: relative;
+    padding: 15px;
 }
 
-/* Том гарчиг */
+/* Дээд зураг */
+.top-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Гарчиг */
 .big-title {
-    font-size: 58px;
+    font-size: 28px;
     font-weight: 700;
-    color: #6AC26A;
-    margin: 0 0 20px 0;
-    line-height: 1.1;
+    color: #78c878;
+    text-align: center;
+    margin: 10px 0 20px;
+    line-height: 1.3;
+}
+
+/* Бүлгийн гарчиг */
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
 /* Дэд гарчиг */
-.section-title {
-    font-size: 26px;
-    font-weight: 700;
-    color: #4CAF50;
-}
-
 .subtitle {
-    margin-top: -10px;
-    font-size: 16px;
-    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 10px;
 }
 
+/* Анхааруулга */
 .warning {
+    background: #d4ffcf;
+    border-left: 5px solid #4CAF50;
     display: inline-block;
-    margin: 10px 0;
-    padding: 6px 12px;
-    border: 2px solid #6AC26A;
-    color: #4CAF50;
+    padding: 5px 10px;
+    margin-bottom: 15px;
     font-weight: 600;
     border-radius: 6px;
 }
 
-/* Жагсаалт */
+/* Жагсаалт гарчиг */
 .list-title {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
-    margin-top: 20px;
+    margin: 18px 0 8px;
+    color: #333;
 }
 
+/* Жагсаалт */
 .items li,
 .steps li {
-    margin-bottom: 8px;
-    font-size: 16px;
-}
-
-/* Зураг оролцох хэсэг */
-.illustration {
-    width: 150px;
-    height: 150px;
-    background: #eee;
-    margin: 20px 0;
-    border-radius: 10px;
-}
-
-/* Paragraph */
-.paragraph {
-    font-size: 16px;
     margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 15px;
 }
 
-/* Хуудасны дугаар */
-.page-number {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    color: #4CAF50;
+/* Параграф */
+.paragraph {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Responsive — Утасанд зориулсан */
+@media (max-width: 480px) {
+    .big-title {
+        font-size: 24px;
+    }
+
+    .page {
+        padding: 10px;
+    }
+
+    .items li,
+    .steps li,
+    .paragraph {
+        font-size: 14px;
+    }
 }

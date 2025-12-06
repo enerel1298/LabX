@@ -157,25 +157,30 @@
 <body>
   <div class="card-wrap" aria-hidden="false">
     <div class="card" role="region" aria-label="Login form">
-      <h1>Login</h1>
+      <h1>Бүртгүүлэх</h1>
 
       <form onsubmit="event.preventDefault(); alert('Logged in (demo)');">
         <div>
-          <label for="user">Username</label>
-          <input id="user" class="input" type="text" placeholder="Username" autocomplete="username" required>
+          <label for="user">Email оруулна уу</label>
+          <input id="user" class="input" type="text" placeholder="Email" autocomplete="username" required>
+        </div>
+
+         <div>
+          <label for="user">Password</label>
+          <input id="user" class="input" type="text" placeholder="Password" autocomplete="username" required>
         </div>
 
         <div>
-          <label for="pass">Password</label>
+          <label for="pass">Давтана уу</label>
           <input id="pass" class="input" type="password" placeholder="Password" autocomplete="current-password" required>
         </div>
 
         <div class="row">
-          <label>Аккаунт байхгүй юу?</label>
-          <a class="forgot" href="burtguuleh.html">Бүртгүүлэх</a>
+          <label class="checkbox"><input type="checkbox" />Show Password</label>
+          
         </div>
 
-        <button type="submit" class="btn">Login</button>
+        <button type="submit" class="btn">Бүртгүүлэх</button>
 
         <div class="social" aria-hidden="true">
           <div>Google</div>

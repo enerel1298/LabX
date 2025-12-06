@@ -13,6 +13,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(#ECEFFE, #CED6FB);
+    background-image: url(background.png);
 }
 
 .card-wrapper {
@@ -54,23 +55,32 @@ body {
 }
 
 .card-list .card-link .badge {
-    color: #5372f0;
+    
     padding: 8px 16px;
-    background: #dde4ff;
     font-size: 0.95rem;
     font-weight: 500;
-    margin: 16px 0 18px;
+    margin: 16px;
     
     width: fit-content;
     border-radius: 50px;
 
+    writing-mode: vertical-rl;   /* Босоо болгоно */
+    text-orientation: mixed; 
+    font-size: 2rem;             /* Томруулна */
+    line-height: 2.2rem;         /* Босоо мөр хоорондын зай */
+    
+    margin: 0 auto; 
 }
 
 .card-list .card-link .card-title {
     font-size: 1.19rem;
-    font-weight: 600;
+    font-weight: 300;
     color: #000;
-   
+    writing-mode: horizontal-tb;   /* хэвтээ */
+    text-orientation: mixed;       /* үсгүүд хэвийн харагдана */
+    font-size: 1.5rem;          /* Босоо мөр хоорондын зай */
+    
+    margin: 0 auto; 
 }
 
 .card-list .card-link .card-button {
