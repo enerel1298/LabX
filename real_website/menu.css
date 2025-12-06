@@ -1,0 +1,76 @@
+.menu-categories{
+    display: flex;
+    justify-content: center;   /* Дунд байрлуулна */
+    align-items: stretch;
+    gap: 30px;                 /* Хайрцагнуудын хооронд зай */
+    margin-top: 50px;
+    flex-wrap: nowrap;
+
+    width: 100%;                 /* Контейнер бүх дэлгэцийг эзэлнэ */
+    max-width: 1100px;           /* Дунд хэмжээг тогтоож төвд барина */
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.menu-category{
+    background: #f8f8f8;       /* Цайвар саарал фон (зурагтай адил) */
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 12px;
+    transition: .3s ease;
+    cursor: pointer;
+    width: 230px;              /* BOX хэмжээ тогтмол */
+}
+
+.menu-category:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.menu-category i{
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.menu-category h3{
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #222;
+}
+
+.menu-category ion-icon{
+    font-size: 2.5rem;   /* ICON-ийн хэмжээг хүссэнээрээ солино */
+    color: var(--primary-color); /* Хүсвэл өнгө */
+    margin-bottom: 20px;
+}
+
+
+.link1{
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 15px;
+    text-decoration: none;
+    color: inherit;
+}
+.menu-category p{
+     writing-mode: vertical-rl;   /* Босоо болгоно */
+    
+    font-size: 2rem;             /* Томруулна */
+    line-height: 2.2rem;         /* Босоо мөр хоорондын зай */
+    
+    margin: 0 auto;    
+}
+
+
+
+@media (max-width: 576px) {
+    .menu-categories{
+        flex-wrap: wrap;       /* Утсан дээр багтсан хэмжээгээр дараалж байрлана */
+        justify-content: center;
+    }
+}

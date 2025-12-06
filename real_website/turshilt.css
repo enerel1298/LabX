@@ -1,0 +1,82 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+    padding: 20px;
+}
+
+.page {
+    width: 800px;
+    background: #fff;
+    margin: auto;
+    padding: 40px 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Том гарчиг */
+.big-title {
+    font-size: 58px;
+    font-weight: 700;
+    color: #6AC26A;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+}
+
+/* Дэд гарчиг */
+.section-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.subtitle {
+    margin-top: -10px;
+    font-size: 16px;
+    color: red;
+}
+
+.warning {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 6px 12px;
+    border: 2px solid #6AC26A;
+    color: #4CAF50;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* Жагсаалт */
+.list-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.items li,
+.steps li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Зураг оролцох хэсэг */
+.illustration {
+    width: 150px;
+    height: 150px;
+    background: #eee;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Paragraph */
+.paragraph {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Хуудасны дугаар */
+.page-number {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #4CAF50;
+}
