@@ -18,7 +18,9 @@
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      background: var(--bg-image);
+      background:
+     
+        var(--bg-image);
       background-size:cover;
       background-position:center;
       display:flex;
@@ -28,6 +30,7 @@
       color:#fff;
     }
 
+    
     .card-wrap{
       width:100%;
       max-width:var(--card-width);
@@ -35,37 +38,6 @@
       display:flex;
       align-items:center;
       justify-content:center;
-    }
-
-    /* hero title placed in the circled area (doesn't change cards) */
-    .hero {
-      position: absolute;
-      top: -28%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      max-width: calc(var(--card-width) * 1.6); /* a bit wider so it reaches the circled area */
-      text-align: center;
-      pointer-events: none; /* won't interfere with clicks on cards */
-      z-index: 0; /* sits behind the card (card has z-index:1) */
-    }
-
-    .hero-main{
-      font-size: clamp(20px, 4vw, 38px);
-      font-weight: 700;
-      letter-spacing: 1px;
-      color: rgba(255,255,255,0.95);
-      text-shadow: 0 6px 18px rgba(0,0,0,0.6), 0 2px 10px rgba(0,0,0,0.45);
-      margin-bottom: 6px;
-      transform: rotate(-0.6deg);
-    }
-
-    .hero-sub{
-      font-size: clamp(12px, 2vw, 14px);
-      color: rgba(255,255,255,0.85);
-      opacity: 0.95;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.45);
-      transform: rotate(-0.6deg);
     }
 
     /* "hand-drawn" looking outer border using pseudo element */
@@ -178,18 +150,11 @@
     @media (max-width:420px){
       .card{ padding:22px; border-radius:20px; }
       .card-wrap::before{ inset:-8px; border-radius:24px; }
-      .hero { top: -40%; }
     }
   </style>
 </head>
 <body>
   <div class="card-wrap" aria-hidden="false">
-    <!-- HERO TITLE: this is the clean text in the circled area -->
-    <div class="hero" aria-hidden="true">
-      <div class="hero-main">LabX</div>
-      <div class="hero-sub">Таны Цахим Туршилт</div>
-    </div>
-
     <div class="card" role="region" aria-label="Login form">
       <h1>Бүртгүүлэх</h1>
 
