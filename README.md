@@ -1,2 +1,1 @@
 # LabX
-# LabX
