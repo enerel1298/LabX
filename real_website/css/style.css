@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
@@ -7,16 +7,26 @@
 .header {
     min-height: 80vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(img/background.png);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/background.png);
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
+.lab {
+    color: #fff;
+    min-height: 5vh;
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+}
+
 
 
 .search-bar {
-    position: relative;
+    position: absolute;
+    top: 39px;
+    right: 505px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,8 +49,9 @@
     outline: none;
     width: 100%;
     font-size: 12px;
-    background: transparent;
+    background-color: transparent;
     color: #000;
+    height: 100%;
 }
 
 .search-bar i {
@@ -75,7 +86,7 @@ nav img {
     font-weight: 700;
     margin: 0;
     line-height: 1.2;
-    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero-title-box p {
@@ -99,11 +110,14 @@ nav img {
 .menu-categories {
     width: 100%;
     display: flex;
-    justify-content: center;   /* — ГОЛЛУУЛНА */
+    justify-content: center;
+    /* — ГОЛЛУУЛНА */
     align-items: center;
-    gap: 40px;                 /* Картуудын хооронд зай */
+    gap: 40px;
+    /* Картуудын хооронд зай */
     margin-top: 60px;
-    z-index: 10;               /* Давалгаанаас дээр харагдана */
+    z-index: 10;
+    /* Давалгаанаас дээр харагдана */
     position: relative;
 }
 
@@ -182,7 +196,11 @@ nav img {
 nav .fa {
     display: none;
 }
+
 @media (max-width: 700px) {
+    .lab {
+        padding-right: 37%;
+    }
     .text-box h1 {
         font-size: 20px;
         z-index: 0;
@@ -196,25 +214,39 @@ nav .fa {
     .nav-links {
         position: absolute;
         background: #2c3e50;
-        height: 100vh;
+        height: 165vh;
         width: 200px;
         top: 0px;
         right: -200px;
         text-align: left;
-        z-index: 1;
+        z-index: 100;
         transition: 0.5s;
-        
+
     }
+
     nav .fa {
         display: block;
         color: #fff;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
-       
+
     }
+    nav .fa.fa-bars {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
     .nav-links ul {
         padding: 30px;
     }
 
+    .search-bar {
+        top:30px;
+        right: 20px;
+    }
+
+    
+    
 }
