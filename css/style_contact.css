@@ -12,7 +12,7 @@ section{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #095a55;
+    background: #CED6FB;
 }
 
 section::before{
@@ -22,7 +22,7 @@ section::before{
     left: 0;
     width: 50%;
     height: 100%;
-    background: #fff38e;
+    background: #9baae5;
 }
 .container{
     position: relative;
@@ -38,7 +38,7 @@ section::before{
     top: 40px;
     width: 350px;
     height: calc(100% - 80px);
-    background: #095a55;
+    background: #324590;
     z-index: 1;
     padding: 40px;
     display: flex;
@@ -167,14 +167,14 @@ section::before{
         font-size: 12px;
         font-weight: 400;
         letter-spacing: 1px;
-        color: #095a55;
+        color: #5372f0;
         font-weight: 500;
     }
 
     .container .contactForm .formBox .inputBox input[type="submit"]{
         position: relative;
         cursor: pointer;
-        background: #095a55;
+        background: #5372f0;
         color: #fff;
         border: none;
         max-width: 150px;
@@ -182,7 +182,7 @@ section::before{
     }
 
      .container .contactForm .formBox .inputBox input[type="submit"]:hover{
-        background: #0d948b;
+        background: #202d60;
      }
 
      @media (max-width: 1200px) {

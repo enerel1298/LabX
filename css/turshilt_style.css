@@ -12,8 +12,118 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(#ECEFFE, #CED6FB);
-    background-image: url(../img/background.png);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/background.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 51px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Hover underline */
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #5372f0;
+    display: block;
+    margin: auto;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/* ICONS (hamburger / close) */
+nav .fa {
+    display: none;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 8px 14px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.search-bar:hover {
+    width: 150px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 12px;
+    background: transparent;
+    color: #000;
+}
+
+.search-bar i {
+    cursor: pointer;
+    font-size: 20px;
+    color: #5372f0;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #ddd;
 }
 
 .card-wrapper {
@@ -114,5 +224,35 @@ body {
 
     .card-wrapper .swiper-slide-button {
         display: none;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #2c3e50;
+        height: 165vh;
+        width: 200px;
+        top: 0px;
+        right: -200px;
+        text-align: left;
+        z-index: 100;
+        transition: 0.5s;
+    }
+
+    nav .fa {
+        display: block;
+    }
+
+    nav .fa.fa-bars {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+    }
+
+    .nav-links ul {
+        padding: 30px;
     }
 }

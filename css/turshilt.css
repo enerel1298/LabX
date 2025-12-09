@@ -6,22 +6,6 @@ body {
     background: #ffffff;
 }
 
-
-
-
-.extra-info {
-    background: #d6f5d6;            
-    border-left: 6px solid #4CAF50; 
-    padding: 15px 20px;
-    border-radius: 8px;
-    width: 260px;                
-    font-size: 15px;
-    line-height: 1.5;
-    color: #2e5d2e;
-}
-
-
-
 .page {
     width: 100%;
     max-width: 600px;
