@@ -1,100 +1,44 @@
 .menu-categories{
-    display: flex;
-    justify-content: center;   /* Дунд байрлуулна */
-    align-items: stretch;
-    gap: 30px;                 /* Хайрцагнуудын хооронд зай */
-    margin-top: 50px;
-    flex-wrap: nowrap;
-
-    width: 100%;                 /* Контейнер бүх дэлгэцийг эзэлнэ */
-    max-width: 1400px;           /* Дунд хэмжээг тогтоож төвд барина */
-    margin-left: auto;
-    margin-right: auto; 
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    width: 100%;
 }
 
 .menu-category {
     position: relative;
-}
-
-.card-title {
-    position: absolute;
-    top: 9px;
-    left: 9px;
-
-    background: rgba(255, 255, 255, 0.85);
-    padding: 4px 10px;
-    border-radius: 8px;
-
-    font-size: 14px;
-    font-weight: 600;
-    color: #222;
-    letter-spacing: 0.5px;
-
-    backdrop-filter: blur(6px);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    z-index: 15;
-}
-
-
-.menu-category{
-    background: #e1eff6;       /* Цайвар саарал фон (зурагтай адил) */
-    padding: 40px 30px;
-    text-align: center;
-    border-radius: 12px;
-    transition: .3s ease;
-    cursor: pointer;
-    width: 230px;              /* BOX хэмжээ тогтмол */
+    padding: 20px 18px;
+    text-align: left;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 18px 40px rgba(5, 10, 25, 0.25);
 }
 
 .menu-category:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-4px);
+    border-color: rgba(83, 114, 240, 0.35);
 }
 
 .menu-category i{
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
+    font-size: 26px;
+    color: #cbd6ff;
+    margin-bottom: 12px;
+    display: inline-flex;
+    padding: 10px;
+    border-radius: 14px;
+    background: rgba(83, 114, 240, 0.12);
 }
 
 .menu-category h3{
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    color: #222;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #e9edf7;
 }
 
-.menu-category ion-icon{
-    font-size: 2.5rem;   /* ICON-ийн хэмжээг хүссэнээрээ солино */
-    color: var(--primary-color); /* Хүсвэл өнгө */
-    margin-bottom: 20px;
-}
-
-
-.link1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    border-radius: 15px;
-    text-decoration: none;
-    color: inherit;
-}
 .menu-category p{
-     writing-mode: vertical-rl;   /* Босоо болгоно */
-    
-    font-size: 2rem;             /* Томруулна */
-    line-height: 2.2rem;         /* Босоо мөр хоорондын зай */
-    
-    margin: 0 auto;    
-}
-
-
-
-@media (max-width: 576px) {
-    .menu-categories{
-        flex-wrap: wrap;       /* Утсан дээр багтсан хэмжээгээр дараалж байрлана */
-        justify-content: center;
-        z-index: 15;
-    }
+    color: #b5bfd6;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
 }

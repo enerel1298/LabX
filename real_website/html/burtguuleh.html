@@ -1,7 +1,8 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="mn">
 <head>
   <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="../img/logo.png">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Login mockup</title>
   <style>
@@ -13,7 +14,7 @@
     }
 
     html,body{
-      height:100%;
+      min-height:100vh;
       margin:0;
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
       -webkit-font-smoothing:antialiased;
@@ -21,10 +22,9 @@
       background: var(--bg-image);
       background-size:cover;
       background-position:center;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:30px;
+      background-attachment: fixed;
+      display:block;
+      padding:0;
       color:#fff;
     }
 
@@ -181,48 +181,63 @@
       .hero { top: -40%; }
     }
   </style>
+  <link rel="stylesheet" href="../css/register.css">
+    <script src="../javascript/navbar.js" defer></script>
 </head>
-<body>
-  <div class="card-wrap" aria-hidden="false">
-    <!-- HERO TITLE: this is the clean text in the circled area -->
-    <div class="hero" aria-hidden="true">
-      <div class="hero-main">LabX</div>
-      <div class="hero-sub">Таны Цахим Туршилт</div>
+<body class="register-page">
+  <main class="register-shell">
+    <div class="register-hero">
+      <h1>LabX</h1>
+      <p>Туршилтын бүртгэлээ идэвхжүүлээрэй</p>
     </div>
+    <div class="register-card-wrap" aria-hidden="false">
+      <div class="register-card" role="region" aria-label="Login form">
+        <h1>Бүртгүүлэх</h1>
 
-    <div class="card" role="region" aria-label="Login form">
-      <h1>Бүртгүүлэх</h1>
+        <form class="register-form" onsubmit="event.preventDefault(); alert('Logged in (demo)');">
+          <div>
+            <label class="register-label" for="user">Email оруулна уу</label>
+            <input id="user" class="register-input" type="text" placeholder="Email" autocomplete="username" required>
+          </div>
 
-      <form onsubmit="event.preventDefault(); alert('Logged in (demo)');">
-        <div>
-          <label for="user">Email оруулна уу</label>
-          <input id="user" class="input" type="text" placeholder="Email" autocomplete="username" required>
-        </div>
+          <div>
+            <label class="register-label" for="pass1">Password</label>
+            <input id="pass1" class="register-input" type="password" placeholder="Password" autocomplete="new-password" required>
+          </div>
 
-         <div>
-          <label for="user">Password</label>
-          <input id="user" class="input" type="text" placeholder="Password" autocomplete="username" required>
-        </div>
+          <div>
+            <label class="register-label" for="pass2">Давтана уу</label>
+            <input id="pass2" class="register-input" type="password" placeholder="Password" autocomplete="new-password" required>
+          </div>
 
-        <div>
-          <label for="pass">Давтана уу</label>
-          <input id="pass" class="input" type="password" placeholder="Password" autocomplete="current-password" required>
-        </div>
+          <div class="register-row">
+            <label class="register-checkbox"><input type="checkbox" id="toggle-register" /> Show Password</label>
+          </div>
 
-        <div class="row">
-          <label class="checkbox"><input type="checkbox" />Show Password</label>
-          
-        </div>
+          <button type="submit" class="register-btn">Бүртгүүлэх</button>
 
-        <button type="submit" class="btn">Бүртгүүлэх</button>
-
-        <div class="social" aria-hidden="true">
-          <div>Google</div>
-          <div class="divider" role="presentation"></div>
-          <div>Facebook</div>
-        </div>
-      </form>
+          <div class="register-social" aria-hidden="true">
+            <div>Google</div>
+            <div class="register-divider" role="presentation"></div>
+            <div>Facebook</div>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
+  </main>
+  <script>
+    (function() {
+      const pass1 = document.getElementById('pass1');
+      const pass2 = document.getElementById('pass2');
+      const toggle = document.getElementById('toggle-register');
+      if (toggle) {
+        toggle.addEventListener('change', () => {
+          const type = toggle.checked ? 'text' : 'password';
+          if (pass1) pass1.type = type;
+          if (pass2) pass2.type = type;
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

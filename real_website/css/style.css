@@ -1,252 +1,119 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-}
-
-.header {
-    min-height: 80vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../img/background.png);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-.lab {
-    color: #fff;
-    min-height: 5vh;
-    position: relative;
-    display: inline-block;
-    font-size: 15px;
-}
-
-
-
-.search-bar {
-    position: absolute;
-    top: 39px;
-    right: 505px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-    width: 40px;
-    background-color: #fff;
-    border-radius: 50px;
-    padding: 8px 14px;
-    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
-    transition: 0.4s ease;
-    overflow: hidden;
-}
-
-.search-bar:hover {
-    width: 150px;
-}
-
-.search-bar input {
-    border: none;
-    outline: none;
-    width: 100%;
-    font-size: 12px;
-    background-color: transparent;
-    color: #000;
-    height: 100%;
-}
-
-.search-bar i {
-    cursor: pointer;
-    font-size: 20px;
-    color: #5372f0;
-}
-
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav img {
-    width: 51px;
-}
-
 .hero-title-box {
     width: 100%;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 7px;
-    top: -100px;
-    position: relative;
-    color: #fff;
+    color: #e9edf7;
+    margin-top: 6px;
 }
 
+
 .hero-title-box h1 {
-    font-size: 40px;
+    font-size: clamp(30px, 4vw, 42px);
     font-weight: 700;
-    margin: 0;
-    line-height: 1.2;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    margin: 0 0 10px;
+    letter-spacing: 0.2px;
 }
 
 .hero-title-box p {
-    font-size: 18px;
-    opacity: 0.9;
-    margin-top: 12px;
+    margin: 0;
+    color: #b5bfd6;
 }
 
-.nav-links {
-    flex: 1;
-    text-align: right;
+.season-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
+.season-card {
     position: relative;
-}
-
-.menu-categories {
-    width: 100%;
     display: flex;
-    justify-content: center;
-    /* — ГОЛЛУУЛНА */
-    align-items: center;
-    gap: 40px;
-    /* Картуудын хооронд зай */
-    margin-top: 60px;
-    z-index: 10;
-    /* Давалгаанаас дээр харагдана */
-    position: relative;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 18px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    z-index: 100;
 }
 
+.season-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(83, 114, 240, 0.35);
+}
 
+.season-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(83, 114, 240, 0.12);
+    color: #cbd8ff;
+    font-size: 28px;
+}
 
 .mongol-text {
-    font-size: 26px;
-    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #dce5ff;
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    margin: 0;
 }
 
-
-.nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #5372f0;
-    display: block;
-    margin: auto;
-    border-radius: 50px;
-    transition: 0.5s;
-}
-
-
-.nav-links ul li:hover::after {
-    width: 100%;
-
-}
-
-
-.text-box {
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.text-box h1 {
-    font-size: 62px;
-}
-
-.text-box p {
-    margin: 10px 0 40px;
+.season-footer {
+    color: #93a2be;
     font-size: 14px;
-    color: #ddd;
+    margin-top: auto;
 }
 
-.hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #5372f0;
-    border: 1px solid #5372f0;
-    padding: 10px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-    border-radius: 50px;
-}
-
-.hero-btn:hover {
-    border: 1px solid #5372f0;
-    background: #91ade5;
-    transition: 1s;
-}
-
-
-nav .fa {
-    display: none;
-}
-
-@media (max-width: 700px) {
-    .lab {
-        padding-right: 37%;
-    }
-    .text-box h1 {
-        font-size: 20px;
-        z-index: 0;
-    }
-
-    .nav-links ul li {
-        display: block;
-        z-index: 1;
-    }
-
-    .nav-links {
-        position: absolute;
-        background: #2c3e50;
-        height: 165vh;
-        width: 200px;
-        top: 0px;
-        right: -200px;
+@media (max-width: 768px) {
+    .hero-title-box {
         text-align: left;
-        z-index: 100;
-        transition: 0.5s;
-
+        gap: 6px;
     }
 
-    nav .fa {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-
-    }
-    nav .fa.fa-bars {
-        position: absolute;
-        top: 15px;
-        right: 20px;
+    .hero-title-box h1 {
+        font-size: 28px;
     }
 
-    .nav-links ul {
-        padding: 30px;
+    .hero-title-box p {
+        font-size: 14px;
     }
 
-    .search-bar {
-        top:30px;
-        right: 20px;
+    .season-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
     }
 
-    
-    
+    .season-card {
+        padding: 16px 14px;
+        gap: 10px;
+    }
+
+    .season-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    .mongol-text {
+        font-size: 18px;
+    }
+
+    .chip-row {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 520px) {
+    .page-shell {
+        gap: 18px;
+    }
+
+    .hero-card {
+        padding: 18px 16px;
+    }
+
+    .season-grid {
+        grid-template-columns: 1fr;
+    }
 }
