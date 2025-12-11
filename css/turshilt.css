@@ -1,0 +1,115 @@
+/* Ерөнхий тохиргоо */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+}
+
+
+
+
+.extra-info {
+    background: #d6f5d6;            
+    border-left: 6px solid #4CAF50; 
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 260px;                
+    font-size: 15px;
+    line-height: 1.5;
+    color: #2e5d2e;
+}
+
+
+
+.page {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 15px;
+}
+
+/* Дээд зураг */
+.top-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Гарчиг */
+.big-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #78c878;
+    text-align: center;
+    margin: 10px 0 20px;
+    line-height: 1.3;
+}
+
+/* Бүлгийн гарчиг */
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Дэд гарчиг */
+.subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Анхааруулга */
+.warning {
+    background: #d4ffcf;
+    border-left: 5px solid #4CAF50;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+/* Жагсаалт гарчиг */
+.list-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 18px 0 8px;
+    color: #333;
+}
+
+/* Жагсаалт */
+.items li,
+.steps li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+/* Параграф */
+.paragraph {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Responsive — Утасанд зориулсан */
+@media (max-width: 480px) {
+    .big-title {
+        font-size: 24px;
+    }
+
+    .page {
+        padding: 10px;
+    }
+
+    .items li,
+    .steps li,
+    .paragraph {
+        font-size: 14px;
+    }
+}

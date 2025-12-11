@@ -1,13 +1,9 @@
-@import url(#);
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
 }
-
 
 body {
     min-height: 100vh;
@@ -132,4 +128,9 @@ footer .wave#wave4 {
     100% {
         background-position-x: 1000px;
     }
+}
+
+/* modern footer class */
+.site-footer {
+    margin-top: auto;
 }

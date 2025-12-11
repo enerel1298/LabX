@@ -1,146 +1,84 @@
 <!DOCTYPE html>
 <html lang="mn">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Хатуу, шингэн, хий төлөв</title>
-
-    <style>
-        body {
-            font-family: "Arial", sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #fafafa;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 30px 0;
-        }
-
-        h2 {
-            color: #5dbb4a;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .section {
-            margin-bottom: 25px;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 6px solid #7ad25b;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .list {
-            margin-left: 20px;
-            line-height: 1.6;
-        }
-
-        .note {
-            background: #eaf8e3;
-            border-left: 6px solid #5cb043;
-            padding: 15px;
-            margin-top: 15px;
-            border-radius: 6px;
-        }
-
-        .columns {
-            display: flex;
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .col {
-            flex: 1;
-            background: #f4fff2;
-            padding: 20px;
-            border-radius: 6px;
-            border-left: 6px solid #7ad25b;
-            line-height: 1.6;
-        }
-
-        .images {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .images img {
-            width: 160px;
-            margin: 0 10px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
 </head>
+
 <body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">2. Хатуу, шингэн, хий төлөв</h2>
 
-<div class="container">
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    <li>Цаасан эсвэл хуванцар аяга – 3 ширхэг</li>
+                    <li>Ус</li>
+                    <li>Хайрга</li>
+                </ul>
+            </div>
 
-    <h2>2. Хатуу, шингэн, хий төлөв</h2>
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
 
-    <div class="section">
-        <h3>Хэрэглэх зүйлс:</h3>
-        <ul class="list">
-            <li>Цаасан эсвэл хуванцар аяга – 3 ширхэг</li>
-            <li>Ус</li>
-            <li>Хайрга</li>
-        </ul>
-    </div>
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                    <li>Нэг аягыг усаар дүүргээд, хоёр дахь аяган дотор нь хайрга хийгээд сайн чигжээрэй.</li>
+                    <li>Гурав дахь аягыг хоосон байлгана.</li>
+                </ol>
+            </div>
 
-    <div class="section">
-        <h3>Хийх дараалал:</h3>
-        <ol class="list">
-            <li>Нэг аягыг усаар дүүргээд, хоёр дахь аяган дотор нь хайрга хийгээд сайн чигжээрэй.</li>
-            <li>Гурав дахь аягыг хоосон байлгана.</li>
-        </ol>
-    </div>
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Хоосон, ус, хайргатай аяганы ялгаа</div>
+            </div>
 
-    <div class="images">
-        <img src="https://via.placeholder.com/150x200?text=Ayga+1" alt="">
-        <img src="https://via.placeholder.com/150x200?text=Ayga+2" alt="">
-        <img src="https://via.placeholder.com/150x200?text=Ayga+3" alt="">
-    </div>
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">Хоосон болон усаар дүүргэсэн аягыг шахахад хэлбэр нь бага зэрэг өөрчлөгдөнө.
+                    Харин хайргатай аяга огт шахагдахгүй.</p>
+            </div>
 
-    <div class="section">
-        <h3>Юу болох вэ?</h3>
-        <p>Хоосон болон усаар дүүргэсэн аягыг шахахад хэлбэр нь бага зэрэг өөрчлөгдөнө. 
-           Харин хайргатай аяга огт шахагдахгүй.</p>
-    </div>
-    <div class="content">
-    <img class="inline" src="/real_website/img/background.png" alt="Аяганы зураг">
-  </div>
+            <div class="section">
+                <h3 class="section-title">Яагаад ингэв?</h3>
+                <p class="paragraph">Хоосон аяган дахь агаар бол хий, дараагийн аяган дахь ус нь шингэн төлөв юм.
+                    Харин хайрга нь хатуу төлөвт байдаг.</p>
+            </div>
 
-    <div class="section">
-        <h3>Яагаад ингэв?</h3>
-        <p>Хоосон аяган дахь агаар бол хий, дараагийн аяган дахь ус нь шингэн төлөв юм. 
-           Харин хайрга нь хатуу төлөвт байдаг.</p>
-    </div>
+            <div class="note">
+                <b>Нэмэлт тайлбар:</b><br>
+                Агаар, ус, чулуу гэх мэт бүх зүйл хатуу, шингэн, хий гурван төлөвт оршдог.
+            </div>
 
-    <div class="note">
-        <b>Нэмэлт тайлбар:</b><br>
-        Агаар, ус, чулуу гэх мэт бүх зүйл хатуу, шингэн, хий гурван төлөвт оршдог.
-    </div>
+            <div class="columns">
+                <div class="col">
+                    <b>Хатуу биет:</b><br>
+                    Хэлбэрээ хадгалдаг, шахагддаггүй. Жишээ нь: чулуу.
+                </div>
 
-    <div class="columns">
-        <div class="col">
-            <b>Хатуу биет:</b><br>
-            Хэлбэрээ хадгалдаг, шахагддаггүй. Жишээ нь: чулуу.
+                <div class="col">
+                    <b>Шингэн:</b><br>
+                    Хэлбэрээ хадгалахгүй, савны хэлбэрийг авна. Жишээ: ус.
+                </div>
+
+                <div class="col">
+                    <b>Хий:</b><br>
+                    Хэлбэргүй, эзлэх орон зайд тархана. Жишээ: агаар.
+                </div>
+            </div>
         </div>
-
-        <div class="col">
-            <b>Шингэн:</b><br>
-            Хэлбэрээ хадгалахгүй, савны хэлбэрийг авна. Жишээ: ус.
-        </div>
-
-        <div class="col">
-            <b>Хий:</b><br>
-            Хэлбэргүй, эзлэх орон зайд тархана. Жишээ: агаар.
-        </div>
-    </div>
-
-</div>
-
+    </main>
 </body>
+
 </html>
