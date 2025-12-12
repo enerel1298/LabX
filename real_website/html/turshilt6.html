@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="mn">
 
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="../img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Хатуу, шингэн, хий төлөв</title>
+    <title>Бөөн холион бантан</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/turshilt.css">
     <script src="../javascript/navbar.js" defer></script>
@@ -14,14 +14,17 @@
 <body>
     <main class="page-shell">
         <div class="container">
-            <h2 class="big-title">1. Хатуу, шингэн, хий төлөв</h2>
+            <h2 class="big-title">6. Бөөн холион бантан</h2>
 
             <div class="section">
                 <h3 class="section-title">Хэрэглэх зүйлс:</h3>
                 <ul class="items">
-                    <li>Цаасан эсвэл хуванцар аяга – 3 ширхэг</li>
+                    <li>Жижиг хэмжээтэй лонх 2 ширхэг</li>
+                    <li>Хүнсний будаг эсвэл бэх</li>
                     <li>Ус</li>
-                    <li>Хайрга</li>
+                    <li>Картон цаас</li>
+                    <li>Давс</li>
+                    <li>Хоолны модон савх 2 ширхэг</li>
                 </ul>
             </div>
 
@@ -35,8 +38,12 @@
             <div class="section">
                 <h3 class="section-title">Хийх дараалал:</h3>
                 <ol class="steps">
-                    <li>Нэг аягыг усаар дүүргээд, хоёр дахь аяган дотор нь хайрга хийгээд сайн чигжээрэй.</li>
-                    <li>Гурав дахь аягыг хоосон байлгана.</li>
+                    <li>Хоёр лонхоо усаар дүүргэ.</li>
+                    <li>Нэг лонхонд нь давс, нөгөөд нь хүнсний будаг хий.</li>
+                    <li>Лонхон лахь усаа савхаар сайтар хутга.</li>
+                    <li>Давстай устай лонхны амсар дээр картон цаасаа тавь.</li>
+                    <li>Картон цаасаа сахйтар дараад лонхоо болгоомжтой доож эргүүлэн нөгөө лонхныхоо амсар дээр тогтоо.</li>
+                    <li>Давхарлаж тавьсан лонхнуудаа хөдөлгөлгүйгээр цаасаа эвтэйхэн сугалж ав.</li>
                 </ol>
             </div>
 
@@ -47,50 +54,30 @@
 
             <div class="section">
                 <h3 class="section-title">Юу болох вэ?</h3>
-                <p class="paragraph">Хоосон болон усаар дүүргэсэн аягыг шахахад хэлбэр нь бага зэрэг өөрчлөгдөнө.
-                    Харин хайргатай аяга огт шахагдахгүй.</p>
+                <p class="paragraph">Хоёр лонхны ус холилдож, адилхан өнгөтэй болно.</p>
             </div>
 
             <div class="section">
-                <h3 class="section-title">Яагаад ингэв?</h3>
-                <p class="paragraph">Хоосон аяган дахь агаар бол хий, дараагийн аяган дахь ус нь шингэн төлөв юм.
-                    Харин хайрга нь хатуу төлөвт байдаг.</p>
+                <h3 class="section-title">Яагаад ийм болов?</h3>
+                <p class="paragraph">Будгийн молекулууд тархаж усанд уусна. Эхлээд зүгээр ус, дараа нь давстай устай холилдож уусав. Ингэснээр жигдхэн хольцтой будгийн уусмал бий болж байна.</p>
             </div>
-
             <div class="note">
                 <b>Нэмэлт тайлбар:</b><br>
-                Агаар, ус, чулуу гэх мэт бүх зүйл хатуу, шингэн, хий гурван төлөвт оршдог.
+                Бодисууд шингэн дотор уусахдаа тархаж, жигдхэн холилддог. Жишээ нь: Цайнд хийсэн элсэн чихэр усанд уусч, цайны амттай уусмал болдог. Давс усанд уусахдаа давсны молекулууд усны молекулуудын дунд тархан орж, жигдхэн холилддог. Ийм үйл явцыг уусах гэдэг.
+
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
             </div>
-
-            <div class="columns">
-                <div class="col">
-                    <b>Хатуу биет:</b><br>
-                    Хэлбэрээ хадгалдаг, шахагддаггүй. Жишээ нь: чулуу.
-                </div>
-
-                <div class="col">
-                    <b>Шингэн:</b><br>
-                    Хэлбэрээ хадгалахгүй, савны хэлбэрийг авна. Жишээ: ус.
-                </div>
-
-            <div class="col">
-                <b>Хий:</b><br>
-                Хэлбэргүй, эзлэх орон зайд тархана. Жишээ: агаар.
-            </div>
-        </div>
-
-        <div class="complete-row">
-            <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
-        </div>
         </div>
     </main>
+
     <script>
         (function () {
             const btn = document.querySelector('[data-complete-btn]');
             if (!btn) return;
 
             const STORAGE_KEY = 'labxCompletedDays';
-            const DAY_ID = 'day1';
+            const DAY_ID = 'day6';
 
             function saveComplete(id) {
                 try {

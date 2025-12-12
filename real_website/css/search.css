@@ -133,8 +133,55 @@ header p {
 
 .meal-title {
     font-size: 1.05rem;
-    margin-bottom: 0.35rem;
+    margin: 0 0 6px;
     color: #e9edf7;
+}
+
+.meal-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    background: linear-gradient(135deg, #6a87ff, #5372f0);
+    color: #fff;
+    border: 1px solid rgba(83, 114, 240, 0.6);
+    box-shadow: 0 14px 30px rgba(83, 114, 240, 0.32);
+    text-decoration: none;
+}
+
+.hero-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 16px 38px rgba(83, 114, 240, 0.36);
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.82rem;
+    background: rgba(67, 217, 124, 0.12);
+    color: #a5f3c7;
+    border: 1px solid rgba(67, 217, 124, 0.35);
+}
+
+.status-badge i {
+    color: #7cf7b1;
 }
 
 .meal-summary {

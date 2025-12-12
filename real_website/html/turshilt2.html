@@ -1,59 +1,90 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="mn">
+
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Усны хүч чадал</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Хөдөлдөг бэх</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/turshilt.css">
     <script src="../javascript/navbar.js" defer></script>
 </head>
+
 <body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">2. Хөдөлдөг бэх. (Том хүнээр туслуулаарай!!!)</h2>
 
-<main class="page-shell">
-<div class="page">
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    <li>Шилэн аяга 2 ширхэг</li>
+                    <li>Халуун ус</li>
+                    <li>Хүйтэн ус</li>
+                    <li>Бэх</li>
+                </ul>
+            </div>
 
-    <!-- 🔥 Зураг байрлах хэсэг -->
-    <div class="top-image">
-        <img src="../img/ayga.png" alt="Туршилтын зураг">
-    </div>
-    <!-- 🔥 Зураг байрлах хэсэг дуусав -->
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
 
-    <h1 class="big-title">Хатуу,шингэн,хийн төлөв</h1>
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                    <li>Нэг шилэн аяганд халуун ус, нөгөөд нь хүйтэн ус хий. Аль алинд хийх усны их бага нь тэнцүү байх ёстой.</li>
+                    <li>Аягатай усандаа бэх тусаа.</li>
+                </ol>
+            </div>
 
-    <div class="section">
-        <h2 class="section-title"></h2>
-        <p class="subtitle">Том хүнээр туслуулаарай!</p>
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Үүнийг хараарай.</div>
+            </div>
 
-        <div class="warning">АНХААР!</div>
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">Ус, бэх хоёр холилдож, өнгө нь нэг жигд болно. Гэхдээ халуун усанд хийсэн бэх илүү хурдан уусна.</p>
+            </div>
 
-        <p class="list-title">Хэрэглэгдэх зүйлс:</p>
-        <ul class="items">
-            <li>Цаасан эсвэл хуванцар аяга 3 ширхэг</li>
-            <li>Ус</li>
-            <li>Хайрга</li>
-        </ul>
+            <div class="section">
+                <h3 class="section-title">Яагаад ийм болов?</h3>
+                <p class="paragraph">Хүйтэн усанд молекулууд удаан, харин халуун усанд хурдан хөдөлдөг. Тийм учраас бэхийг халуун усанд хийхэд илүү хурдан тархаж байна.</p>
+            </div>
 
-        <p class="list-title">Хийх дараалал:</p>
-        <ol class="steps">
-            <li>Нэг аягыг усаар дүүргээд, хоёр дахь аяганд хайрга хийж сайтар чигжээрэй.<br> Үлдсэн аяганд юм хийхгүй хэрэггүй.</li>
-            <li>Одоо аяга нэг бүрийг базаж шамшийлгах гээд үз.</li>
-        </ol>
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+        </div>
+    </main>
 
-        <p class="list-title">Юу болох вэ?</p>
-        <p class="paragraph">
-            Хоосон болон устай аягыг базахад шахагдаж, хэлбэр дүрсээ алдана. 
-            Харин хайргатай аягыг яаж ч базахад шаамийхгүй.
-        </p>
-        <p class="list-title">Яагаад ийм болов?</p>
-        <p class="paragraph">
-            Хоосон аяганд агаар(хий гэсэн үг),дараагийн аяганд ус буюу шингэн байна.Гурав дахь аяганд хайрга, <br>өөрөөр хэлбэл хатуу биет бий. Шингэн болон хий нь тодорхой хэлбэргүй байдгаараа хатуу биетээс ялгаатай, тиймээс даралтын үйлчлэлд өртөнө. 
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
 
-        </p>
-    </div>
-</div>
-</main>         
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day2';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
 </body>
+
 </html>
