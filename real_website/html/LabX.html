@@ -27,7 +27,7 @@
             <div class="section-eyebrow">LabX 1.0</div>
             <div class="hero-title-box">
                 <h1>Төсөөллөө бодит болгож өөрийн хязгаартаа хүр.</h1>
-                <p>Карт дээр дарж холбогдох туршилтын дэлгэрэнгүй рүү ороорой.</p>
+                <p>Өдөрт нэг туршилт.</p>
             </div>
             <div class="chip-row">
                 <span class="chip">Хялбар, гарын доорх материал ашиглана.</span>
@@ -73,6 +73,18 @@
                 <div class="season-footer">Ургамал ногойн холбогдолтой</div>
             </a>
         </section>
+
+        <section class="progress-card surface" data-progress-card data-total-pages="50">
+            <div class="progress-meta">
+                <p class="label">Нийт ахиц</p>
+                <h2 class="percent" data-progress-percent>0%</h2>
+                <p class="count" data-progress-count>0 / 0 туршилт</p>
+            </div>
+            <div class="progress-bar">
+                <span class="fill" data-progress-bar style="width:0%"></span>
+            </div>
+        </section>
+
     </main>
  
     <footer class="site-footer">
@@ -84,10 +96,8 @@
         </div>
         <div class="content-wrap">
             <ul class="social_icon">
-                <li><a href="https://www.facebook.com/amarbat.munhenerel"><ion-icon name="logo-facebook"></ion-icon></a>
-                </li>
-                <li><a href="https://www.instagram.com/moojginprivv/"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="https://www.facebook.com/groups/1482308208716901"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="https://www.instagram.com/wbta_art/"><ion-icon name="logo-instagram"></ion-icon></a></li>   
                 <li><a href="contact.html"><ion-icon name="call-outline"></ion-icon></a></li>
             </ul>
 
@@ -99,6 +109,36 @@
         </div>
     </footer>
 
+    <script>
+        (function () {
+            const progressCard = document.querySelector('[data-progress-card]');
+            if (!progressCard) return;
+
+            const totalPages = Number(progressCard.dataset.totalPages) || 50;
+
+            function loadCompleted() {
+                try {
+                    const raw = localStorage.getItem('labxCompletedDays');
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    return set;
+                } catch (e) {
+                    return new Set();
+                }
+            }
+
+            const completed = loadCompleted();
+            const donePages = Math.min(completed.size, totalPages);
+            const percent = totalPages ? Math.round((donePages / totalPages) * 100) : 0;
+
+            const percentEl = progressCard.querySelector('[data-progress-percent]');
+            const countEl = progressCard.querySelector('[data-progress-count]');
+            const barEl = progressCard.querySelector('[data-progress-bar]');
+
+            if (percentEl) percentEl.textContent = `${percent}%`;
+            if (countEl) countEl.textContent = `${donePages} / ${totalPages} туршилт`;
+            if (barEl) barEl.style.width = `${percent}%`;
+        })();
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Усны гурван ааш</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">5. Усны гурван ааш (Том хүнээр туслуулаарай!!!)</h2>
+
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    <li>Жижиглэж хөлдөөсөн мөс</li>
+                    <li>Тагтай сав</li>
+                    <li>Цахилгаан зуух (плитка)</li>
+                </ul>
+            </div>
+
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                    <li>Мөсөө савандаа хийж халаа.</li>
+                    <li>Мөс хайлж, ус буцалж эхэлмэгц савныхаа тагийг тавь.</li>
+                    <li>Савны тагийг түр зуур аваад, буцалж буй усыг сайтар ажигла. Тэгээд буцаан тагла.</li>
+                    <li>Плиткээ унтраагаад, савтай усаа авч хөргө.</li>
+                    <li>Ус хөрсний дараа савныхаа тагийг авч сайн ажигла.</li>
+                </ol>
+            </div>
+
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Хоосон, ус, хайргатай аяганы ялгаа</div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">Саванд ус буцлахад уур нь дээш хөөрч, тагны дотор талд усан туслууд үүссэн байна.</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Яагаад ийм болов?</h3>
+                <p class="paragraph">Савтай мөсийг халаахад хайлж ус болно. Улмаар ус буцлахад уур үүснэ. Усны уур таганд хүрч хөрмөгцөө буцаад усан дуслууд болжээ.</p>
+            </div>
+
+            <div class="note">
+                <b>Нэмэлт тайлбар:</b><br>
+                Мөс бол хатуу биет тул молекулууд нь маш удаан хөдлөнө. Мөсийг халаавал молекулууд нь хурдан хөдөлж, хоорондох холбоосууд нь суларсаар, мөё хайлж ус болно. Усыг халаах тусам молекулууд нь улам хурдан хөдөлж, хоорондоо мөргөлдөн, эцэстээ уур болж агаарт дэгдэнэ. Харин энэ уур хөрвөл шингэн болж хувирна. Усны молекулууд буцан нягтарч байгаа нь тэр. Аливаа бодис хий, шингэн, хатуу энэ гурван төлөвт оршдог тухай дээр өгүүлсөн. Тэгвэл ус байгал дээр энэ гурван төлөвийн нэгээс нөгөөд байнга шилждэг. Хатуу төлөв нь МӨС, шингэн төлөв нь УС, хийн төлөв нь УУР юм. 
+            </div>
+
+            <div class="columns">
+                <div class="col">
+                    <b>Хатуу :</b><br>
+                    Хэлбэрээ хадгалдаг, шахагддаггүй. Жишээ нь: Мөс.
+                </div>
+
+                <div class="col">
+                    <b>Шингэн:</b><br>
+                    Хэлбэрээ хадгалахгүй, савны хэлбэрийг авна. Жишээ нь: Ус.
+                </div>
+
+                <div class="col">
+                    <b>Хий:</b><br>
+                    Хэлбэргүй, эзлэх орон зайд тархана. Жишээ: Уур.
+                </div>
+            </div>
+
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
+
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day5';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>

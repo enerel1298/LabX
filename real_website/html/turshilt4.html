@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="mn">
 
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="../img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Хатуу, шингэн, хий төлөв</title>
+    <title>Салхиар хатаахуй</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/turshilt.css">
     <script src="../javascript/navbar.js" defer></script>
@@ -14,14 +14,14 @@
 <body>
     <main class="page-shell">
         <div class="container">
-            <h2 class="big-title">1. Хатуу, шингэн, хий төлөв</h2>
+            <h2 class="big-title">4. Салхиар хатаахуй</h2>
 
             <div class="section">
                 <h3 class="section-title">Хэрэглэх зүйлс:</h3>
                 <ul class="items">
-                    <li>Цаасан эсвэл хуванцар аяга – 3 ширхэг</li>
-                    <li>Ус</li>
-                    <li>Хайрга</li>
+                    <li>Хэц</li>
+                    <li>Нойтон алчуур 2 ширхэг</li>
+                    <li>Хувин</li>
                 </ul>
             </div>
 
@@ -31,66 +31,53 @@
                 <img src="../img/ayga.png" alt="Аяга">
                 <img src="../img/ayga.png" alt="Аяга">
             </div>
+            <div class="section">
+                <h3 class="section-title">Орчин:</h3>
+                <ul class="items">
+                    <li>Салхитай өдөр</li>
+                </ul>
+            </div>
 
             <div class="section">
                 <h3 class="section-title">Хийх дараалал:</h3>
                 <ol class="steps">
-                    <li>Нэг аягыг усаар дүүргээд, хоёр дахь аяган дотор нь хайрга хийгээд сайн чигжээрэй.</li>
-                    <li>Гурав дахь аягыг хоосон байлгана.</li>
+                    <li>Хоёр алчуурыг норгоод, нэгийг нь хүзүүнд үзүүлж хэнзэн дээр тохож салхинд хатаана. Нөгөөг нь хувин хийж, газрын дээр тавь.</li>
                 </ol>
             </div>
 
             <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
                 <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
-                <div class="caption">Хоосон, ус, хайргатай аяганы ялгаа</div>
+                <div class="caption">Үүнийг хараарай.</div>
             </div>
 
             <div class="section">
                 <h3 class="section-title">Юу болох вэ?</h3>
-                <p class="paragraph">Хоосон болон усаар дүүргэсэн аягыг шахахад хэлбэр нь бага зэрэг өөрчлөгдөнө.
-                    Харин хайргатай аяга огт шахагдахгүй.</p>
+                <p class="paragraph">Хэнзэн дээр тохсон алчуур, хувин дээр хийсэн алчуураас илүү хурдан хатна.</p>
             </div>
 
             <div class="section">
-                <h3 class="section-title">Яагаад ингэв?</h3>
-                <p class="paragraph">Хоосон аяган дахь агаар бол хий, дараагийн аяган дахь ус нь шингэн төлөв юм.
-                    Харин хайрга нь хатуу төлөвт байдаг.</p>
+                <h3 class="section-title">Яагаад ийм болов?</h3>
+                <p class="paragraph">Салхи чийгтэй агаарыг үлээж зайлуулдаг, тэр дор нь хуурай агаараар нөхөж байна. Ингэснээр алчуурт шингэсэн ус нөгөөхөө бодвол хурдан ууршжээ.</p>
             </div>
 
             <div class="note">
                 <b>Нэмэлт тайлбар:</b><br>
-                Агаар, ус, чулуу гэх мэт бүх зүйл хатуу, шингэн, хий гурван төлөвт оршдог.
+                Хүмүүс үсээ хурдан хатаая гэвэл сэнсддэг биз? Үсний сэнс хиймэл "хиймэл салхи" гаргадаг гэсэн үг.
             </div>
 
-            <div class="columns">
-                <div class="col">
-                    <b>Хатуу биет:</b><br>
-                    Хэлбэрээ хадгалдаг, шахагддаггүй. Жишээ нь: чулуу.
-                </div>
-
-                <div class="col">
-                    <b>Шингэн:</b><br>
-                    Хэлбэрээ хадгалахгүй, савны хэлбэрийг авна. Жишээ: ус.
-                </div>
-
-            <div class="col">
-                <b>Хий:</b><br>
-                Хэлбэргүй, эзлэх орон зайд тархана. Жишээ: агаар.
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
             </div>
-        </div>
-
-        <div class="complete-row">
-            <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
-        </div>
         </div>
     </main>
+
     <script>
         (function () {
             const btn = document.querySelector('[data-complete-btn]');
             if (!btn) return;
 
             const STORAGE_KEY = 'labxCompletedDays';
-            const DAY_ID = 'day1';
+            const DAY_ID = 'day4';
 
             function saveComplete(id) {
                 try {
