@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дулааны урсгал</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">Ханасан уусмал</h2>
+
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    <li>Шлэн аяга хоёр ширхэг</li>
+                    <li> Хүйтэн Ус</li>
+                    <li>Бүлээн ус</li>
+                    <li>Элсэн чихэр</li>
+                    <li>Халбага</li>
+                </ul>
+            </div>
+
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                    <li>Эхний шилэн аяганд талд нь хүртэл хүйтэн ус хий. </li>
+                    <li>Элсэн чихэр нэмээд, хутга. Ингэхдээ хэдэн халбага элсэн чихэр хийснээ тоол. 
+                        Сүүлдээ элсэн чихэр уусахаа больж ёроолд нь тунаж эхэлмэгц хийхээ зогсоо.
+                    </li>
+                    <li> Хоёр дахь шилэн аяганы дунд хүртэл нь бүлээн ус хийгээд, дахин дээрх шиг элсэн чихэр нэм. Ингэхдээ мөн л хэдэн халбага хийснээ 
+                        тогтоож ав. 
+                    </li>
+                </ol>
+            </div>
+
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Жишээ зураг</div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">
+                  Хүйтэн усанд элсэн чихэр илүү удаан уусна.</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Яагаад ингэв?</h3>
+                <p class="paragraph">
+                 Бүлээн усанд молекулууд элсэн чихрийн молекулыг илүү ихээр холбоно. Хэрэв хүйтэн усанд элсэн чихэр цаашид уусахгүй 
+                бол уг уусмал ханасан байна гэсэн үг. Уусмал хөрвөл илүүдэл элсэн чихэр ёроолд нь тунана. </p>
+            </div>
+            
+
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
+
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day18 ';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>

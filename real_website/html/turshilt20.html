@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дулааны урсгал</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">Хагацаагүй нөхөд</h2>
+
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    <li> Хүйтэн устай шилэн аяга 4 ширхэг</li>
+                    <li>Халбага</li>
+                    <li>Кофе, цай, казао, цагаан будаа</li>
+                    
+                </ul>
+            </div>
+
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                    <li>Эхний аяганд кофе, хоёр дахид цай, гурав дахид какао, дөрөв дэхэд нь цагаан будаа тус бүр нэг халбагыг хий.</li>
+                    <li>Тэгээд бүх аягатайг болгоомжтой хутга.</li>
+                </ol>
+            </div>
+
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Жишээ зураг</div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">
+                  Кофе, цай, какао болон цагаан будаа уусахгүй. Хэсэг хугацааны дараа тэд савны ёроолд тунана, эсвэл хутгахаар зарим нь хөвөн гарч ирнэ.</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Яагаад ингэв?</h3>
+                <p class="paragraph">
+                         Кофе, цай, какао болон цагаан будааны молекулууд усны молекулуудын завсраар орж чадахгүй, бас хүйтэн усанд уусахгүй, харин жигд тархаж хөвдөг. </p>
+            </div>
+
+            <div class="note">
+                <b>Нэмэлт тайлбар:</b><br>
+                Уумал нь хоёр ба түүнээс дээших бодисын шингэн нэгдэл юм. Шингэнд гүйцэд уусаагүй хэсэг нь ялгаран ёроолд тунана.
+            </div>
+
+           
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
+
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day20';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">Тэнгэрт хэдэн од байдаг бол</h2>
+
+            <div class="section">
+                <h3 class="section-title">Орчин:</h3>
+                <ul class="items">
+                    
+                    <li>Саруул шөнө</li>
+                    
+                </ul>
+            </div>
+             <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ul class="items">
+                    
+                    <li>Саруул шөнө тэнгэрийг ажигла</li>
+                    
+                </ul>
+            </div>
+
+             
+
+             
+
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
+
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Жишээ зураг</div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">
+                Чамд сар, од, тэнгэрийн заадас зэрэг харагдана.</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Яагаад ингэв?</h3>
+                <p class="paragraph">
+                    Шөнийн тэнгэрт 5000 орчим, дуран авайгаар 100 тэрбум гаруй од харж болно. Өдрийн цагаар ч гэсэн одод тэнгэртээ байдаг газраа л байж байдаг. Харин өдөр нарны туяа тусахаар харагдахгүй. Тэнгэрийн заадас гэдэг нь биднээс асар хол буй, олон тэрбум одны бөөгнөрөл юм.</p>
+            </div>
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+            </div>
+             
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
+
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day34';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>

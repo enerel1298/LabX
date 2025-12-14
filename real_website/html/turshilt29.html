@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">Өнгөт арьс</h2>
+
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    
+                    <li>Хурууны лент</li>
+                    
+                </ul>
+            </div>
+
+             
+
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                   
+                    <li>Лентээр нэг хуруугаа ороо</li>
+                    <li>Хэрэв бохирдвол шинэчил, Гартаа нарны тос түрхэхгүйгээр наранд хэдэн өдөр ээ. Хэтэрхий хурц нартай байвал наранд түлэгдэхээс сэргийлэн нарны тос түрхээрэй. </li>
+                    <li>Дараа нь хурууны лентээ ав</li>
+                   
+                </ol>
+            </div>
+
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Жишээ зураг</div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">
+                 Хурууны лент наасан хэсэг цагаан, үлдсэн хэсэг нь борлосон байна. Мөн ленттэй хэсгийн арьс чийгтэй үрчгэр болжээ.</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Яагаад ингэв?</h3>
+                <p class="paragraph">
+                    Нарны цацраг арьсан дээр тусаж, ил хэсэгт пигмент үүссэн учир арьс борлоно. Хүн халууцахаараа хөлс ялгаруулдаг. Харин энэ удаад ялгарсан хөлс гадуур нь лент наасан тул ууршиж чадалгүй, арьс чийглэг, үрчгэр болжээ.</p>
+            </div>
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+            </div>
+             
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
+
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day29';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>

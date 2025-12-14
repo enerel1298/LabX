@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">Баривчлагдсан нарны энерги</h2>
+
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    
+                    <li>Тунгалаг өнгөтэй, зөөлөн материалаар хийсэн гуурс 2 метрээс урт.</li>
+                    <li>Реинэн боолт</li>
+                    <li>Шилэн сав</li>
+                    <li> Тунгалаг цаас</li>
+                    <li>Лонх</li>
+                    <li>Ус</li>
+                    
+                </ul>
+            </div>
+
+             
+
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                   
+                    <li>Гуурсны хоёр үзүүрээс ойролцоогоор 60 см зай үлдээгээд, дунд хэсгийг нь нугалж эвхээд, резинэн боолтоор бэхлэн, шилэн саванд хий. </li>
+                    <li>Тугалган цаасаар шилнийхээ амсрыг битүүлээд, гуурс гарч буй хэсгийг сайн дарж бэхлэ.</li>
+                    <li>Шилийг шадаа гаргаж ширээн дээр тавиад, наранд нэг хэсэг байлга. </li>
+                    <li>Лонхоо усаар дүүргээд шилний хажууд тавь. Гуурсны нэг үзүүрийг устай лонхонд шургуулаад нөгөө үзүүрийг нь ширээнэс унжуул </li>
+                    <li>Гуурсны сул үзүүрээс сор, тэгэхдээ гуурсны нөгөө үзүүр орсон лонхон дотроос ус гүйж ирэхээр хүчтэй сор.</li>
+                    <li>Гуурснаас гоожиж байгаа ус, лонхтой ус хоёрын температурыг харьцуул.</li>
+                   
+                </ol>
+            </div>
+
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Жишээ зураг</div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">
+                Гуурснаас гоожиж байгаа, лонхтой ус лонхонд байгаа уснаас арай халуун байна. </p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Яагаад ингэв?</h3>
+                <p class="paragraph">
+                Гуурсны гадуур ороосон тугалган цаас нарны энергийг шингээж, гуурсан дотуур гүйж буй усыг халаана.</p>
+                </div>
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+            </div>
+             
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
+
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day31';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дулааны урсгал</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title"> 8.Хоромхон зуурын ууршилт</h2>
+
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    <li>Хэмжүүртэй аяга</li>
+                    <li>Шөлний таваг</li>
+                    <li>лонх</li>
+                    <li>Ус</li>
+                </ul>
+            </div>
+
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                    <li>Лонх таваг хоёрт адил хэмжээтэй ус хий.</li>
+                    <li>Тэгээл наранд ээвэр цонхны тавцан дээр тавьж хонуул.</li>
+                    <li>Маргааш нь лонх болон тавагтай усаа дахин хэмжиж үз.</li>
+                </ol>
+            </div>
+
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Ууршилт</div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">
+                    Тавган дахь ус лонхон дахиас бага болсон байна.</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Яагаад ингэв?</h3>
+                <p class="paragraph">
+                    Усны молекулууд нарийхан амсартай лонхыг бодвол том гадаргуутай тавагнаас илүү хурдан ууршина. Жишээ нь гудамжинд тогтсон
+                жижигхэн, гүнзгий шалбааг, гүехэн устай том шалбаагнаас удаан хатна гэсэн үг юм.</p>
+            </div>
+
+            <div class="note">
+                <b>Нэмэлт тайлбар:</b><br>
+               Ус байнгын эргэлтэд оршдог. Халахаараа нүдэнд үзэгдэхгүй уур болж, агаарт дэгдэнэ. Энэ хийн төлөвөөсөө эргэж шингэн төлөвт 
+               шилжсэнээр униар, манан эсвэл үүл үүсгэдэг. Үүл хүндэрвэл ус нь бороо, мөндөр, цас болон газар бууна. Хур тунадас хөрсөнд шингэж,
+               гүний устай нийлж хуримтлагдана. Гүний ус будаг болон буцаад гадаргуу дээр гарч ирнэ. Булаг шанд урссаар горхи, гол, мөрөн болж 
+               далайд цутгадаг. Нуур, далайн ус наранд халж ууршаад, агаарт дэгдэх бөгөөд дахийд л бороо болж газарт бууна. Усны байнгын эргэлт гэж энэ.
+            </div>
+
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
+
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day8';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>
