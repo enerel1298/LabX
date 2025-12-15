@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агаар мандал</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">40. Агаар мандал</h2>
+
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    <li>Алим (дэлхийг орлуулах)</li>
+                    <li>Хутга</li>
+                </ul>
+            </div>
+
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                    <li>Алимаа зүсээд ажигла.</li>
+                </ol>
+            </div>
+
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Үүнийг хараарай.</div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">Алим үрийн гэр, зөөлөн эд, хальснаас бүрддэг. Хальс нь зөөлөн эдтэй харьцуулахад
+                    тун нимгэн байна. Үүнтэй адилтгах дэлхийн хийн бүрхүүлийг адилтгаж болно. Энэхүү нимгэн хийн
+                    бүрхүүлгүйгээр дэлхий дээр амьдрал орших боломжгүй билээ.</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Яагаад ийм болов?</h3>
+                <p class="paragraph"> Нарны туяа гялгар уутыг нэвтэрч ороод, дулаан болж хувирна. Уутан дотроос дулааны
+                    зөвхөн багахан хэсэг нь алдагдах тул ийнхүү өндөр хэмтэй байна.</p>
+            </div>
+
+            <div class="note">
+                <b>Нэмэлт тайлбар:</b><br>
+                Агаар мандал гэж дэлхийн бөмбөрцгийг бүрхэж буй хийн бүрхүүлийг хэлнэ. Энэ нь төрөл бүрийн хийн
+                холимгоос бүрдэнэ. Үүнд өмнө азот болон хүчилтөрөгчийг нэрлэж болно. Агаар мандлыг олон бүсэд хуваадаг.
+                Үүнд:
+                <br><br>
+                <b>Тропосфер:</b><br>
+                Энэ нь далайн түвшнээс дээш 10 км хүртэлх зайг хамардаг бүс бөгөөд үүн дотор цаг агаар үүсэж, нийт усны
+                уур хуримтлагдаж, бас бидний амьсгалдаг агаар хуралддаг.
+                <br><br>
+                <b>Стратосфер:</b><br>
+                Энэ нь хуурай, үүлгүй бүс бөгөөд үүн дотор байгалийн озоны давхарга бий. Далайн түвшнээс дээш 10-аас 50
+                км хүртэлх зайг хамарна. Стратосферийн бүсийн доод хэсгээр онгоц нисдэг.
+                <br><br>
+                <b>Мезосфер:</b><br>
+                Энэ нь −80°C хүртэл хүйтэрдэг бүс бөгөөд өндөр нь 50–80 км хүрнэ.
+                <br><br>
+                <b>Термосфер:</b><br>
+                Энэ нь 80–500 километрийн өндөрт байдаг халуун бүс юм.
+                <br><br>
+                <b>Экзосфер:</b><br>
+                Уг бүс далайн түвшнээс дээш 700–1000 км-т байрладаг. Энэ хэсэгт хөнгөн бөгөөд цэнэггүй атомууд бий.
+                <br><br>
+                Ойролцоогоор 1000 км зузаантай дэлхийн агаар мандал маш нимгэн тооцогддог. Агаар мандлын агаарын 99% нь
+                хамгийн доод давхаргын 30 км-т байдаг. Чи уулын оргилд гарч байсан бол зөвхөн дээш мацах хүчээ шавхахаас
+                болж амьсгалахад анзаарагдсан байх. Өндөрлөг газар сийрэг агаартай. Дэлхийн хамгийн өндөр уулсын оройд
+                (далайн түвшнээс дээш 10 км орчим) ер нь бол хүн амьсгалж чаддаггүй!
+            </div>
+
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
+
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day40';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>

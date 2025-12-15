@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эрчигнүүр</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/turshilt.css">
+    <script src="../javascript/navbar.js" defer></script>
+</head>
+
+<body>
+    <main class="page-shell">
+        <div class="container">
+            <h2 class="big-title">48. Эрчигнүүр</h2>
+
+            <div class="section">
+                <h3 class="section-title">Хэрэглэх зүйлс:</h3>
+                <ul class="items">
+                    <li>Цагаан картон</li>
+                    <li>Гортиг</li>
+                    <li>Хурц үзүүрлэсэн богино харандаа</li>
+                    <li>Хайч</li>
+                    <li>Хадаас</li>
+                    <li>Өнцөг хэмжигчтэй гурвалжин шугам</li>
+                    <li>Өнгийн харандаа</li>
+                </ul>
+            </div>
+
+            <div class="images">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+                <img src="../img/ayga.png" alt="Аяга">
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Хийх дараалал:</h3>
+                <ol class="steps">
+                    <li>Гортигоор цагаан картон дээр 10 см-ийн голчтой тойрог зураад хайчилж ав.</li>
+                    <li>Тойргийг зурагт үзүүлсэн шиг өнцөг хэмжигчээр долоон тэнцүү хэсэгт хуваагаад, өнгөөр ялган буд. Хэсэг бүрийн өнцөг нь ойролцоогоор 51° байх ёстой.</li>
+                    <li>Өнгөт тойргийн голд нүх гаргаад харандааны үзүүрийг нь доош харуулан шургуулаад, эрчигнүүр адил эргүүл.</li>
+                </ol>
+            </div>
+
+            <div class="visual" aria-label="Шахалт үзүүлсэн аяга">
+                <img class="inline" src="../img/ayga.png" alt="Аяганы зураг">
+                <div class="caption">Үүнийг хараарай.</div>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Юу болох вэ?</h3>
+                <p class="paragraph">Өнгөт эрчигнүүрийг хурдан эргүүлэхэд зөвхөн цагаан өнгөтэй мэт харагдана.</p>
+            </div>
+
+            <div class="section">
+                <h3 class="section-title">Яагаад ийм болов?</h3>
+                <p class="paragraph"> Бидний нүд янз бүрийн өнгө ялгадаг. Нүдний торлог бүрхэвчин дэх өнгө мэдрэгч эс (боргоцой булчирхай) зөвхөн анхдагч өнгүүд болох улаан, ногоон, хөх өнгийг ялгана. Хөх өнгийг хөх, улааныг улаан, ногооныг ногоон боргоцой булчирхай дэмжинэ. Тус бүр хоёр анхдагч өнгөнөөс бүрдсэн өнгийг хоёрдогч өнгө гэнэ. Шар бол улаан, ногоон гэрлээс бүрдсэн хоёрдогч өнгө юм. Цэнхэрийг ногоон, хөх, ягааныг улаан, хөх өнгийг холиж байж гарган авдаг. Хөх, улаан, ногоон гэрлийн туяаг холивол цагаан гэрэл үүснэ. Өөрөөр хэлбэл гурван боргоцой булчирхай гуравуулаа зэрэг өдөөгдөж байна. Анхдагч гурван өнгөний холимгийг нэмэлт өнгөний холимог гэж нэрлэдэг.</p>
+            </div>
+            <div class="complete-row">
+                <button type="button" class="complete-btn" data-complete-btn>Дуусгах</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        (function () {
+            const btn = document.querySelector('[data-complete-btn]');
+            if (!btn) return;
+
+            const STORAGE_KEY = 'labxCompletedDays';
+            const DAY_ID = 'day38';
+
+            function saveComplete(id) {
+                try {
+                    const raw = localStorage.getItem(STORAGE_KEY);
+                    const set = raw ? new Set(JSON.parse(raw)) : new Set();
+                    set.add(id);
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(Array.from(set)));
+                } catch (e) { /* ignore storage errors */ }
+            }
+
+            btn.addEventListener('click', () => {
+                saveComplete(DAY_ID);
+                window.location.href = 'turshiltw.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>
