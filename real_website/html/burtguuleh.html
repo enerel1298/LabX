@@ -38,8 +38,7 @@
       justify-content:center;
     }
 
-    /* hero title placed in the circled area (doesn't change cards) */
-    .hero {
+     .hero {
       position: absolute;
       top: -28%;
       left: 50%;
@@ -195,10 +194,10 @@
       <div class="register-card" role="region" aria-label="Login form">
         <h1>Бүртгүүлэх</h1>
 
-        <form class="register-form" onsubmit="event.preventDefault(); alert('Logged in (demo)');">
+        <form class="register-form" id="registerForm">
           <div>
-            <label class="register-label" for="user">Email оруулна уу</label>
-            <input id="user" class="register-input" type="text" placeholder="Email" autocomplete="username" required>
+            <label class="register-label" for="email">Email оруулна уу</label>
+            <input id="email" class="register-input" type="email" placeholder="Email" autocomplete="username" required>
           </div>
 
           <div>
@@ -236,6 +235,48 @@
           const type = toggle.checked ? 'text' : 'password';
           if (pass1) pass1.type = type;
           if (pass2) pass2.type = type;
+        });
+      }
+
+      const form = document.getElementById('registerForm');
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const email = (document.getElementById('email')?.value || '').trim();
+          const pwd1 = pass1?.value || '';
+          const pwd2 = pass2?.value || '';
+
+          if (!email || !pwd1 || !pwd2) {
+            alert('Бүх талбарыг бөглөнө үү');
+            return;
+          }
+          if (pwd1 !== pwd2) {
+            alert('Нууц үг таарахгүй байна');
+            return;
+          }
+          if (pwd1.length < 6) {
+            alert('Нууц үг 6+ тэмдэгт байх ёстой');
+            return;
+          }
+
+          try {
+            const res = await fetch('http://localhost/auth/register.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, password: pwd1 })
+            });
+
+            const data = await res.json().catch(() => ({ success: false, error: 'Серверийн буруу хариу' }));
+
+            if (res.ok && data.success) {
+              alert('Бүртгэл амжилттай. Нэвтэрнэ үү.');
+              window.location.href = 'login2.php';
+            } else {
+              alert(data.error || 'Бүртгэл амжилтгүй');
+            }
+          } catch (err) {
+            alert('Сүлжээний алдаа. Дахин оролдоно уу.');
+          }
         });
       }
     })();

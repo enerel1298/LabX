@@ -1,4 +1,5 @@
-﻿<!doctype html>
+﻿<?php header('Content-Type: text/html; charset=utf-8'); ?>
+<!doctype html>
 <html lang="mn">
 
 <head>
@@ -13,19 +14,20 @@
       --accent: #00a8ff;
     }
 
-    html,body{
-      min-height:100vh;
-      margin:0;
+    html,
+    body {
+      min-height: 100vh;
+      margin: 0;
       font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       background: var(--bg-image);
-      background-size:cover;
-      background-position:center;
+      background-size: cover;
+      background-position: center;
       background-attachment: fixed;
-      display:block;
-      padding:0;
-      color:#fff;
+      display: block;
+      padding: 0;
+      color: #fff;
     }
 
     .page {
@@ -193,10 +195,10 @@
       <div class="card" role="region" aria-label="Login form">
         <h1>Нэвтрэх</h1>
 
-        <form onsubmit="event.preventDefault(); alert('Logged in (demo)');">
+        <form id="loginForm">
           <div>
-            <label for="user">Username</label>
-            <input id="user" class="input" type="text" placeholder="Username" autocomplete="username" required>
+            <label for="email">Email</label>
+            <input id="email" class="input" type="email" placeholder="Email" autocomplete="username" required>
           </div>
 
           <div>
@@ -225,15 +227,59 @@
       </div>
     </div>
   </div>
+
   <script>
     (function() {
-      const pass = document.getElementById('pass');
-      const toggle = document.getElementById('toggle-login2');
-      if (pass && toggle) {
-        toggle.addEventListener('change', () => {
-          pass.type = toggle.checked ? 'text' : 'password';
+      const form = document.getElementById("loginForm");
+      const passInput = document.getElementById("pass");
+      const toggle = document.getElementById("toggle-login2");
+
+      if (toggle && passInput) {
+        toggle.addEventListener("change", () => {
+          passInput.type = toggle.checked ? "text" : "password";
         });
       }
+
+      if (!form) return;
+
+      form.addEventListener("submit", async function(e) {
+        e.preventDefault();
+
+        const email = (document.getElementById("email")?.value || "").trim();
+        const password = passInput?.value || "";
+
+        if (!email || !password) {
+          alert("Email эсвэл нууц үг оруулна уу");
+          return;
+        }
+
+        try {
+          const res = await fetch("http://localhost/auth/login.php", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              email,
+              password
+            })
+          });
+
+          const data = await res.json().catch(() => ({
+            success: false,
+            error: "Серверийн буруу хариу"
+          }));
+
+          if (res.ok && data.success) {
+            alert("Нэвтрэх амжилттай");
+            window.location.href = "LabX.html";
+          } else {
+            alert(data.error || "Нэвтрэх амжилтгүй");
+          }
+        } catch (err) {
+          alert("Сүлжээний алдаа. Дахин оролдоно уу.");
+        }
+      });
     })();
   </script>
 </body>
