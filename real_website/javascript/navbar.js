@@ -140,7 +140,7 @@
                     cache: "no-store"
                 });
             } catch (err) {
-                // Allow redirect even if the request fails.
+                
             }
             window.location.href = "login2.php";
         });
